@@ -1,11 +1,14 @@
 require 'httparty'
 require 'json'
 require 'pry'
+require 'dotenv/load'
 
 # Steam API Key
 api_key = ENV['API_KEY']
 # Steam ID (64-bit)
 steam_id = ENV['STEAM_ID']
+
+binding.pry
 
 # Steam API URL for owned games
 owned_games_url = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=#{api_key}&steamid=#{steam_id}&format=json"
